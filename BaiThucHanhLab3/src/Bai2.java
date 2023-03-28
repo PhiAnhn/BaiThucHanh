@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Bai1 {
+public class Bai2 {
         public static void main(String[] args) throws Exception {
             Hinhtru htru = new Hinhtru();
             nhanvien nv = new nhanvien();
