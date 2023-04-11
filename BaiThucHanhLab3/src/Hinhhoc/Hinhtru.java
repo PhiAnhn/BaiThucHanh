@@ -1,11 +1,12 @@
+package Hinhhoc;
 import java.util.Scanner;
 
-public class Hinhtru {
-    final float Pi = 3.14f;
-    float r;
+public class Hinhtru extends Hinhtron {
     float h;
-    float dientich, chuvi, thetich;
-    Scanner sc = new Scanner(System.in);    
+    Scanner sc = new Scanner(System.in); 
+    public Hinhtru(){
+        ten = "Hinh Tru";
+    }   
     public void nhapbankinh(){       
             System.out.print("Nhap ban kinh r=");
             r=sc.nextFloat();

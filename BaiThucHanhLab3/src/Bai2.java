@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+import Hinhhoc.Hinhtru;
+import NhanVien.nhanvien;
+
 public class Bai2 {
         public static void main(String[] args) throws Exception {
             Hinhtru htru = new Hinhtru();
