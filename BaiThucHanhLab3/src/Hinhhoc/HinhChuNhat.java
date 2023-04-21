@@ -3,24 +3,39 @@ package Hinhhoc;
 import java.util.Scanner;
 
 public class HinhChuNhat extends Hinhhoc {
-    float dai;
-    float rong;
+    private float dai;
+    private float rong;
     Scanner sc = new Scanner(System.in);
     public HinhChuNhat(){
-        ten = "HÌnh Chữ Nhật";
+        super.setTen ("Hinh Chu Nhat");
     }    
-    public void nhapChieuDai(){     
-            System.out.print("Nhap chieu dai =");
-            dai=sc.nextFloat();
+
+    public float getDai(){
+        return dai;
     }
-    public void nhapChieuRong(){
+    public void setDai (float dai){
+        this.dai = dai;
+    }
+    public void NhapChieuDai(Scanner sc){
         System.out.print("Nhap chieu dai =");
-            rong=sc.nextFloat();
+        setDai(sc.nextFloat());
+    }
+    public float getRong(){
+        return rong;
+    }
+    public void setRong(float rong){
+        this.rong = rong;
+    }
+    public void NhapChieuRong( Scanner sc){
+        System.out.print("Nhap chieu rong =");
+        setRong(sc.nextFloat());
     }
     public void tinhChuVi(){
-        chuvi = 2* (dai + rong);
+        float chuvi = 2* (dai + rong);
+        setChuVi(chuvi);
     }
     public void tinhDienTich(){
-        dientich = dai * rong;
+        float dientich = dai * rong;
+        setDienTich(dientich);
     }
 }

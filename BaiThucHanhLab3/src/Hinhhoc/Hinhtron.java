@@ -3,24 +3,26 @@ import java.util.Scanner;
 
 public class Hinhtron extends Hinhhoc {
 
-    float r;
+    private float r;
     public Hinhtron(){
-        ten = "Hinh Tron";
+        super.setTen("Hinh Tron") ;
     }
-    public void nhapbankinh(){
-            Scanner sc = new Scanner(System.in);           
+    public float getBanKinh(){
+        return r;
+    }
+    public void setBanKinh(float r){
+        this.r = r;
+    }
+    public void nhapbankinh(Scanner sc ){         
             System.out.print("Nhap ban kinh r=");
-            r=sc.nextFloat();
-        sc.close();
+            setBanKinh(sc.nextFloat());
         }
-    public void tinhchuvi(){
-        chuvi=2*r*Pi;
+    public void tinhChuVi(){
+        float chuvi=2*r*super.getPi();
+        super.setChuVi(chuvi);
     } 
-    public void tinhdientich(){
-        dientich=r * r *Pi ;
-    }
-    public void inthongso(){
-    System.out.printf("Chu vi cua hinh tron ban kinh %f = %f",r ,chuvi);
-    System.out.printf("\nDien tich cua hinh tron ban kinh %f = %f",r, dientich);
+    public void tinhDienTich(){
+        float dientich =r * r *super.getPi() ;
+        super.setDienTich(dientich);
     }
 }

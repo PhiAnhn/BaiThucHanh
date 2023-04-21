@@ -2,35 +2,32 @@ package Hinhhoc;
 import java.util.Scanner;
 
 public class Hinhtru extends Hinhtron {
-    float h;
+    private float h;
     Scanner sc = new Scanner(System.in); 
     public Hinhtru(){
-        ten = "Hinh Tru";
+        super.setTen("Hinh Tru");
     }   
-    public void nhapbankinh(){       
-            System.out.print("Nhap ban kinh r=");
-            r=sc.nextFloat();
-
-        }
-    public void nhapchieucao(){
-            Scanner sc = new Scanner(System.in);            
+    public float getChieuCao(){
+        return h;
+    }
+    public void setChieuCao(float h){
+        this.h= h;
+    }  
+    public void NhapChieuCao(){           
             System.out.print("Nhap chieu cao h=");
-            h=sc.nextFloat();
-            sc.close();
-            }  
+            setChieuCao(sc.nextFloat());
+            }          
     public void tinhchuvi(){
-                chuvi=2*r*Pi*h;
+                float chuvi=2*super.getBanKinh()*super.getPi()*h;
+                super.setChuVi(chuvi);
             }    
     public void tinhdientich(){
-                dientich=2*r*r*Pi + 2*Pi*r*h;
+                float dientich=2*(float) Math.pow(super.getBanKinh(), 2)*super.getPi() + 2*super.getPi()*super.getBanKinh()*h;
+                super.setDienTich(dientich);
             } 
     public void tinhthetich(){
-                thetich=r*r*Pi*h;
-            }
-    public void inthongtin(){
-                System.out.printf("Hinh tru duong tron ban kinh %f, chieu cao %f co chu vi = %f",r, h ,chuvi); 
-                System.out.printf("\nHinh tru duong tron ban kinh %f, chieu cao %f co dientich = %f",r, h ,dientich); 
-                System.out.printf("\nHinh tru duong tron ban kinh %f, chieu cao %f co thetich = %f",r, h ,thetich); 
-            }             
+                float thetich= (float) Math.pow(super.getBanKinh(), 2) * super.getPi()*h;
+                super.setTheTich(thetich);
+            }        
     
 }
