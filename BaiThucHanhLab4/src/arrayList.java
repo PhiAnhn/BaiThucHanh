@@ -9,13 +9,13 @@ public class arrayList {
 
         System.out.print("Nhap kich thuoc cua mang: ");
         int n = sc.nextInt();
-        sc.close();
+
         for (int i = 0; i < n; i++) {
             System.out.printf("Nhap vao phan tu a[%d]: ", i);
             number = sc.nextInt();
             arrlist.add(number);
         }
-
+        sc.close();
         System.out.print("Phan tu trong mang la: ");
         for (Integer integer : arrlist) {
             System.out.print(integer + "\t");
@@ -42,3 +42,4 @@ public class arrayList {
         System.out.print("Phan tu nho nhat cua mang la: " + arrlist.get(n-1));
     }
 }
+
